@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+        <img class="subheader" src="./new changes/subheader.png" alt="header">
+    
+        <nav class="navbar navbar-expand-sm  sticky-top navbar-light">
+            <a class="navbar-brand" href="./index.html">
+              <img src="./new changes/logo.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./english.html">English</a>
+                      </li> 
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">اتصل بنا</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./plasticKnowlege.html">معلومة بلاستيكية</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      خدماتنا
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="./activities.html">نشطات الشركة</a>
+                      <a class="dropdown-item" href="./weSell.html">نشتري و نبيع</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="./ourPricipels.html">سياسة الجودة,البيئة,السلامة والصحة المهنية</a>
+                    </div>
+                    </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      عن الشركة
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="./ourLocation.html">موقعنا</a>
+                      <a class="dropdown-item" href="./aboutUs.html">من نحن؟</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="./ourVision.html">رؤيتنا,مهمتنا و إلتزاماتنا</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./index.html">الرئيسية</a>
+                  </li>
+                </ul>
+              </div>
+              
+          </nav>
+    
+    </div>
+    <div class=" container-fluid location ">
+        <div class="col-sm-6 col-12" style="direction: rtl; float: right; margin-top: 40px; text-align: right;">
+        <h1>تواصل معنا</h1> 
+        <form action="contact" id="contact-form" method="post" role="form" style="margin-top: 40px;">
+            <span id="msg"></span>
+            <div class="form-group">
+              <label for="name">الإسم</label>
+              <input type="text" name="name" class="form-control" id="name" placeholder="الإسم" required>
+            </div>
+            <div class="form-group">
+                <label for="telephone">التليفون</label>
+                <input type="tel" name="telephone" class="form-control" id="telephone" placeholder="التليفون">
+              </div>
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="البريد الإلكتروني" required>
+                <small id="emailHelp" class="form-text text-muted">لن يتم مشاركة بريدك الإلكتروني مع أي شخص أو جهه أخري.</small>
+              </div>
+            <div class="form-group">
+            <label for="message">الرسالة</label>
+            <textarea class="form-control" name="message" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" data-target="#response" data-toggle="modal" class="btn btn-primary">أرسل</button>
+          </form>
+        </div>
+        <div class="col-sm-6 col-12">
+            <img class="mang-img" src="./new changes/IMG-20180913-WA0009.jpg"/>
+            <img class="mang-img0" src="./new changes/IMG-20181111-WA0008.jpg"/>
+        </div>
+    </div>
+    <div class="modal fade" id="response" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              تم إرسال الرسالة بنجاح
+            </div>
+            <div class="modal-footer">
+              <button type="button" data-dismiss="modal" class="btn btn-primary">حسنا</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <footer>
+      <div class="row">
+        <div class="col-sm-3 navbar-brand">
+          <img src="./new changes/logo.png">
+          <hr style="margin-top: 10px;"/>
+        </div>
+      </div>
+      <div class="row">
+        
+        <div class="col-sm-6">
+          
+          <a class="nav-link" href="./index.html">الرئيسية</a>
+          <a class="nav-link" href="./ourLocation.html">
+            موقعنا
+          </a>
+          <a class="nav-link" href="./aboutUs.html">من نحن؟</a>
+          
+          <a class="nav-link" href="./ourVision.html">رؤيتنا,مهمتناوإلتزامتنا</a>
+        </div>
+        <div class="col-sm-6">
+          
+          
+          <a class="nav-link" href="./activities.html">نشاطات الشركة</a>
+          
+          <a class="nav-link" href="./weSell.html">نشتري و نبيع</a>
+              
+          <a class="nav-link" href="./ourPricipels.html">سياسة الجودة,البيئة,السلامة والصحة المهنية</a>
+
+          <a class="nav-link" href="./plasticKnowlege.html">معلومة بلاستيكية</a>
+        
+          <a class="nav-link active-footer" href="#">اتصل بنا</a>
+        
+          <a class="nav-link" href="./english.html">English</a>
+        </div>
+      </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

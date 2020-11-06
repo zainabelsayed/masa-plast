@@ -42,9 +42,10 @@ body{
     transition: 0.3s ease;
 }
 .location{
-  background-image: url('../new changes/location.png');
-  height: 700px;
+  background-image: url('./new changes/location.png');
+  /*height: 700px;*/
   margin-top: -100px;
+  margin-bottom: 40px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -343,7 +344,6 @@ footer a{
   height: 185.5px;
 }
 .location{
-  height: 1100px;
   background-repeat: repeat;
   background-size: cover;
 }
@@ -353,7 +353,7 @@ footer a{
     height: 280px;
   }
   .info{
-    top: 5%;
+    top: 10%;
   }
   .navbar-brand img{
     max-width: 50px;
@@ -371,13 +371,6 @@ footer a{
   .counting .plastic{
     margin-top: -19px;
   }
-  /*.navbar button{
-    margin: 10px 10px 10px 47px;
-    position: absolute;
-    top: 0%;
-    left: 100%;
-    right: 0%;
-  }*/
   .process{
     justify-self: center;
     margin: 10px 20px 10px 20px;

@@ -1,7 +1,7 @@
-const counters = document.querySelectorAll('.counter')
-const speed = 500
+/*const counters = document.querySelectorAll('.counter')
+const speed = 500*/
 const mapDiv= document.querySelector('.mapDiv')
-counters.forEach(counter=>{
+/*counters.forEach(counter=>{
     document.addEventListener('scroll', ()=>{
         if (window.scrollY- 196 >= counter.getBoundingClientRect().top) {
             console.log('I have been reached');
@@ -20,7 +20,7 @@ counters.forEach(counter=>{
             counter.innerText = target
         }
     }
-})
+})*/
 
 
 

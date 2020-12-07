@@ -10,38 +10,14 @@ body{
     text-align: center;
     font-size: 20px;
 }
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
-}
-/* Style for Placeholder Text*/
-::placeholder { /* Firefox, Chrome, Opera */ 
-    color:var(--text_light);
-    font-size: medium;
-    font-family: 'Oswald', sans-serif;
 
-} 
-  
-:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color:var(--text_light);
-    font-family: 'Oswald', sans-serif;
-
-} 
-  
-::-ms-input-placeholder { /* Microsoft Edge */ 
-    color:var(--text_light);
-    font-family: 'Oswald', sans-serif;
-
-} 
 .jumbotron{
     background-color: transparent;
     margin-top:-70px;
 }
 .container{
     max-width: 100%;
-    max-height: 720px;
+   /* max-height: 720px;*/
 }
 .navbar {
     position: absolute;
@@ -212,16 +188,7 @@ footer a{
   height:200px;
   margin-top: -85px;
 }
-.mang-img{
-  width:461.24px;
-  height:350px;
-  margin-top: 40px;
-}
-.mang-img0{
-  margin-top:40px;
-  width:466.66px;
-  height:350px;
-}
+
 @media screen and (max-width:1200px){
   body{
     font-size: medium;
@@ -293,16 +260,6 @@ footer a{
   .plast-types{
     width: 375.339px;
     height: 220px;
-  }
-  .mang-img{
-    width:329.46px;
-    height:250px;
-    margin-top: 40px;
-  }
-  .mang-img0{
-    margin-top:40px;
-    width:333.3333px;
-    height:250px;
   }
 }
 @media screen and (max-width:600px){

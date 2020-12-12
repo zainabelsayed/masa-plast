@@ -34,7 +34,7 @@ app.post('/contact',(req,res)=>{
     })
     const mailOpts = {
         from:process.env.GMAIL_USER,
-        to:'masa.plast.sales@gmail.com',
+        to:'eng.zainab92@gmail.com',
         subject:'New message from contact form at masaplast.com',
         html:output,
         attachments: [{

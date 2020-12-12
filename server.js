@@ -8,7 +8,7 @@ app.get('/', function(req, res){
     res.send(fs.readFileSync('./website/index.html', 'utf8'));
 
 });
-app.post('https://masa-plast-arabic.herokuapp.com/contact',(req,res)=>{
+app.post('https://masa-plast-arabic.herokuapp.com/contactUs.html/contact',(req,res)=>{
     const output=`
 	
     <p>You have a new contact request</p>

@@ -19,7 +19,7 @@ app.get('/', function(req, res){
     res.send(fs.readFileSync('./website/index.html', 'utf8'));
 
 });
-app.post('/contact',(req,res)=>{
+app.post('/',(req,res)=>{
     const output=`
 	
     <p>You have a new contact request</p>
@@ -63,7 +63,6 @@ app.post('/contact',(req,res)=>{
         }else{
         res.send(`<script>alert("Email Sent Successfully.")</script>`);
         console.log("Message sent");
-        res.redirect('/')
         }
 
     })

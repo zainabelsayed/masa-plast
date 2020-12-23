@@ -46,7 +46,7 @@ app.post('/contact',(req,res)=>{
     })
     const mailOpts = {
         from:process.env.GMAIL_USER,
-        to:'eng.zainab92@gmail.com',
+        to:process.env.RECIPIENT,
         subject:'New message from contact form at masaplast.com',
         html:output,
         attachments: [{
@@ -61,9 +61,9 @@ app.post('/contact',(req,res)=>{
             return console.log(error);
             
         }else{
-        
+        res.send(`<script>alert("Email Sent Successfully.")</script>`);
         console.log("Message sent");
-        res.redirect('/')
+        //res.redirect('/')
         }
 
     })

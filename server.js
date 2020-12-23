@@ -63,7 +63,7 @@ app.post('/contact',(req,res)=>{
         }else{
         res.send(`<script>alert("Email Sent Successfully.")</script>`);
         console.log("Message sent");
-        //res.redirect('/')
+        res.redirect('/contactUs')
         }
 
     })

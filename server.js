@@ -61,9 +61,9 @@ app.post('/',(req,res)=>{
             return console.log(error);
             
         }else{
+        res.redirect("back")
         res.send(`<script>alert("Email Sent Successfully.")</script>`);
         console.log("Message sent");
-        res.redirect('/')
         }
 
     })

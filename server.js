@@ -61,8 +61,8 @@ app.post('/contact',(req,res)=>{
             return console.log(error);
             
         }else{
-        res.redirect("back")
         res.send(`<script>alert("لقد تم إرسال الرسالة بنجاح.")</script>`);
+        res.redirect("back")
         console.log("Message sent");
         }
 

@@ -56,7 +56,7 @@ app.post('/contact',(req,res)=>{
         }]
     }
     
-    smtpTrans.sendMail(mailOpts,(error,response)=>{
+    /*smtpTrans.sendMail(mailOpts,(error,response)=>{
         if(error){
             return console.log(error);
             
@@ -66,7 +66,15 @@ app.post('/contact',(req,res)=>{
         console.log("Message sent");
         }
 
+    })*/
+    smtpTrans
+    .sendMail(mailOpts)
+    .then(()=>{
+        return res
+        .status(200)
+        .json({msg:"لقد تم إرسال الرسالة بنجاح."})
     })
+    .catch((error)=>console.error(error))
     
 })
 

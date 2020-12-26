@@ -25,6 +25,11 @@ const sendingMail= (mail) =>{
         method:"post",
         body:mail,
     }).then((response)=>{
-        return console.log(response.status)
+        if(response.status === 200){
+            alert("لقد تم إرسال الرسالة بنجاح!")
+        } 
+        else{
+            alert("حدث خطأ, رجاء المحاولة مرة أخري")
+        }
     })
 }

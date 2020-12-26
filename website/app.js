@@ -25,6 +25,6 @@ const sendingMail= (mail) =>{
         method:"post",
         body:mail,
     }).then((response)=>{
-        return response.json()
+        return console.log(response)
     })
 }

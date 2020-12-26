@@ -17,7 +17,6 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static('website'))
 app.get('/', function(req, res){
     res.send(fs.readFileSync('./website/index.html', 'utf8'));
-    res.render('contact');
 });
 app.post('/contact',(req,res)=>{
     const output=`
@@ -61,20 +60,12 @@ app.post('/contact',(req,res)=>{
             return console.log(error);
             
         }else{
-        res.render('contact',{msg: 'Email has been sent'});
-        //res.redirect("back")
+        res.send(`<script>alert("لقد تم إرسال الرسالة بنجاح.")</script>`);
+        res.redirect("back")
         console.log("Message sent");
         }
 
     })
-    /*smtpTrans
-    .sendMail(mailOpts)
-    .then(()=>{
-        return res
-        .status(200)
-        .json({msg:"لقد تم إرسال الرسالة بنجاح."})
-    })
-    .catch((error)=>console.error(error))*/
     
 })
 

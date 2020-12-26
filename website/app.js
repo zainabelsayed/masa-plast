@@ -1,28 +1,7 @@
-/*const counters = document.querySelectorAll('.counter')
-const speed = 500*/
+const { response } = require("express");
+
 const mapDiv= document.querySelector('.mapDiv')
-/*counters.forEach(counter=>{
-    document.addEventListener('scroll', ()=>{
-        if (window.scrollY- 196 >= counter.getBoundingClientRect().top) {
-            console.log('I have been reached');
-            updateCount()
-          }
-    });
-    function updateCount(){
-        const target = +counter.getAttribute('data-target')
-        const count = +counter.innerText
-        const inc = (target / speed)
-
-        if(count < target){
-            counter.innerText = (count + inc).toFixed(4)
-            setTimeout(updateCount,3)
-        }else{
-            counter.innerText = target
-        }
-    }
-})*/
-
-
+const form = document.getElementById('contact-form')
 
 //map
 function initMap(){
@@ -36,13 +15,18 @@ function initMap(){
         map:map,
     })
 }
-const updateUI = async() => {// updating the ui with the new data from user and api
-    const request = await fetch('/all')
-    try{
-        const msg=document.getElementById('msg').value
-        msg.innerText='لقد تم إرسال الرسالة بنجاح.'
-        console.log(msg)
-    }catch(error){
-        console.log('errors',error)
-    }
+
+const formEvent = document.addEventListener("submit",(event)=>{
+    event.preventDefault()
+    let mail = new FormData(form)
+    sendingMail(mail)
+})
+
+const sendingMail= (mail) =>{
+    fetch("https://masa-plast-arabic.herokuapp.com/contact",{
+        method:"post",
+        body:mail,
+    }).then((response)=>{
+        return response.json()
+    })
 }

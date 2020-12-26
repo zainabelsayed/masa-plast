@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 const mapDiv= document.querySelector('.mapDiv')
 const form = document.getElementById('contact-form')
 

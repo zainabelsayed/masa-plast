@@ -60,7 +60,7 @@ app.post('/contact',(req,res)=>{
             return console.log(error);
             
         }else{
-        res.status(200).send(alert("لقد تم إرسال الرسالة بنجاح."));
+        res.status(200).send("لقد تم إرسال الرسالة بنجاح.");
         res.redirect("back")
         console.log("Message sent");
         }

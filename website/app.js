@@ -16,7 +16,7 @@ function initMap(){
 
 const formEvent = document.addEventListener("submit",(event)=>{
     event.preventDefault()
-    let mail = new FormData(form)
+    //let mail = new FormData(form)
     sendingMail(mail)
 })
 

@@ -20,10 +20,9 @@ const formEvent = document.addEventListener("submit",(event)=>{
     sendingMail()
 })
 
-const sendingMail= (mail) =>{
+const sendingMail= () =>{
     fetch("https://masa-plast-arabic.herokuapp.com/contact",{
         method:"post",
-        body:mail,
     }).then((response)=>{
         if(response.status === 200){
             alert("لقد تم إرسال الرسالة بنجاح!")

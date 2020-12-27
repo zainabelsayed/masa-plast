@@ -32,7 +32,7 @@ const sendingMail= () =>{
                 name:form.getElementsByTagName('input')[0].value,
                 tel:form.getElementsByTagName('input')[1].value,
                 email:form.getElementsByTagName('input')[2].value,
-                message:form.getElementsByTagName('input')[3].value
+                message:form.getElementsByTagName('textarea')[0].value
             }
         })
     })

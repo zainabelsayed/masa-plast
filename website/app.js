@@ -16,15 +16,25 @@ function initMap(){
 
 const formEvent = form.addEventListener("submit",(event)=>{
     event.preventDefault()
-    let mail = new FormData(form)
+    //let mail = new FormData(form)
     console.log(form)
-    sendingMail(mail)
+    sendingMail()
 })
 
-const sendingMail= (mail) =>{
+const sendingMail= () =>{
     fetch("https://masa-plast-arabic.herokuapp.com/contact",{
-        method:"post",
-        body:mail
+        method:"POST",
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({
+            user:{
+                name:form.getElementById('name'),
+                tel:form.getElementById('telephone'),
+                email:form.getElementById('email'),
+                message:form.getElementById('message')
+            }
+        })
     })
     .then((response)=>{
         if(response.status === 200){

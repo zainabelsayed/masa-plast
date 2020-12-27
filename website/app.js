@@ -17,7 +17,7 @@ function initMap(){
 const formEvent = document.addEventListener("submit",(event)=>{
     event.preventDefault()
     let mail = new FormData(form)
-    console.log(mail)
+    console.log(form)
     sendingMail(mail)
 })
 
@@ -28,6 +28,7 @@ const sendingMail= (mail) =>{
     })
     .then((response)=>{
         if(response.status === 200){
+            console.log(mail)
             alert("لقد تم إرسال الرسالة بنجاح!")
         } 
         else{

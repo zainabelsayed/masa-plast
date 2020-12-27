@@ -21,9 +21,13 @@ const formEvent = document.addEventListener("submit",(event)=>{
 })
 
 const sendingMail= () =>{
-    fetch("https://masa-plast-arabic.herokuapp.com/contact",{
-        method:"post",
-    }).then((response)=>{
-        return response.json()
+    fetch("https://masa-plast-arabic.herokuapp.com/contact")
+    .then((response)=>{
+        if(response.status === 200){
+            alert("لقد تم إرسال الرسالة بنجاح!")
+        } 
+        else{
+            alert("حدث خطأ, رجاء المحاولة مرة أخري")
+        }
     })
 }

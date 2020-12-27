@@ -14,7 +14,7 @@ function initMap(){
     })
 }
 
-const formEvent = document.addEventListener("submit",(event)=>{
+const formEvent = form.addEventListener("submit",(event)=>{
     event.preventDefault()
     let mail = new FormData(form)
     console.log(form)

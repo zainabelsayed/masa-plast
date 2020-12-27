@@ -29,10 +29,10 @@ const sendingMail= () =>{
         },
         body:JSON.stringify({
             user:{
-                name:form.getElementById('name'),
-                tel:form.getElementById('telephone'),
-                email:form.getElementById('email'),
-                message:form.getElementById('message')
+                name:form.getElementsByTagName('input')[0].value,
+                tel:form.getElementsByTagName('input')[1].value,
+                email:form.getElementsByTagName('input')[2].value,
+                message:form.getElementsByTagName('input')[3].value
             }
         })
     })

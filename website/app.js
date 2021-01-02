@@ -21,7 +21,7 @@ const formEvent = form.addEventListener("submit",(event)=>{
     sendingMail(mail)
 })
 
-const sendingMail= () =>{
+const sendingMail= (mail) =>{
     fetch("https://masa-plast-arabic.herokuapp.com/contact",{
         method:"post",
         body:mail

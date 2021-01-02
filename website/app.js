@@ -22,7 +22,7 @@ const formEvent = form.addEventListener("submit",(event)=>{
 })
 
 const sendingMail= () =>{
-    fetch("https://masa-plast-arabic.herokuapp.com/contact",{
+    fetch("https://masa-plast-arabic.herokuapp.com/contact"/*,{
         method:"POST",
         headers:{
             'Content-Type':'application/json'
@@ -35,14 +35,14 @@ const sendingMail= () =>{
                 message:form.getElementsByTagName('textarea')[0].value
             }
         })
-    })
+    }*/)
     .then((response)=>{
-        if(response.status === 200){
-            console.log(mail)
+        return response.json()
+        /*if(response.status === 200){
             alert("لقد تم إرسال الرسالة بنجاح!")
         } 
         else{
             alert("حدث خطأ, رجاء المحاولة مرة أخري")
-        }
+        }*/
     })
 }

@@ -65,12 +65,12 @@ app.post('/contact',(req,res)=>{
         }]
     }
     
-    smtpTrans.sendMail(mailOpts,(error,response)=>{
+    smtpTrans.sendMail(mailOpts,(error,data)=>{
         if(error){
         console.log(error);
             
         }else{
-         response.status(200).send("لقد تم إرسال الرسالة بنجاح.");
+         res.status(200).send("لقد تم إرسال الرسالة بنجاح.");
         }
 
     })

@@ -22,7 +22,7 @@ const formEvent = form.addEventListener("submit",(event)=>{
 const sendingMail=async () =>{
    await fetch("https://masa-plast-arabic.herokuapp.com/contact")
     .then((response)=>{
-        console.log(response.status)
+        console.log(response.status, response)
         if(response.status === 200){
             alert("لقد تم إرسال الرسالة بنجاح!")
         } 

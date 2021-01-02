@@ -29,6 +29,7 @@ app.post('/contact',(req,res)=>{
             data[property]=fields[property].toString()
         })
     })
+    res.send(data)
     const output=`
 	
     <p>You have a new contact request</p>

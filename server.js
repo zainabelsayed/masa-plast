@@ -62,8 +62,7 @@ app.post('/contact',(req,res)=>{
             return console.log(error);
             
         }else{
-        response.status(200).send("لقد تم إرسال الرسالة بنجاح.");
-        console.log("Message sent");
+        return response.status(200).send("لقد تم إرسال الرسالة بنجاح.");
         }
 
     })

@@ -16,16 +16,12 @@ function initMap(){
 
 const formEvent = form.addEventListener("submit",(event)=>{
     event.preventDefault()
-    let mail = new FormData(form)
-    console.log(form, mail)
-    sendingMail(mail)
+    sendingMail()
 })
 
-const sendingMail= (mail) =>{
-    fetch("https://masa-plast-arabic.herokuapp.com/contact",{
-        method:"post",
-        body:mail
-    })
+const sendingMail= () =>{
+    fetch("https://masa-plast-arabic.herokuapp.com/contact"
+    )
     .then((response)=>{
         console.log(response.status)
         if(response.status === 200){

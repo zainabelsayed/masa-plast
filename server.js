@@ -1,5 +1,6 @@
 const express = require('express')
-const bodyParser= require('body-parser')
+//const bodyParser= require('body-parser')
+const multiparty = require('multiparty')
 const nodemailer = require('nodemailer')
 const { google } = require('googleapis')
 const OAuth2 = google.auth.OAuth2
@@ -13,24 +14,31 @@ oauth2Client.setCredentials({
 })
 const accessToken = oauth2Client.getAccessToken()
 const app = express()
-app.use(express.json());
-app.use(bodyParser.urlencoded({extended:true}))
+//app.use(express.json());
+//app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static('website'))
 app.get('/', function(req, res){
     res.send(fs.readFileSync('./website/index.html', 'utf8'));
 });
 app.post('/contact',(req,res)=>{
-    console.log(req.body.name)
+    let form = new multiparty.Form()
+    let data = {}
+    form.parse(req,function(err,fields){
+        console.log(fields)
+        Object.keys(fields).forEach(function(property){
+            data[property]=fields[property].toString()
+        })
+    })
     const output=`
 	
     <p>You have a new contact request</p>
     <img class="subheader" src="cid:subheader" alt="header">
 	<h3>Contact details</h3>
 	<ul>
-	  <li>FirstName: ${req.body.name}</li>
-	  <li>TelNum: ${req.body.telephone}</li>
-	  <li>Email: ${req.body.email}</li>
-	  <li>Message: ${req.body.message}</li>
+	  <li>FirstName: ${data.name}</li>
+	  <li>TelNum: ${data.telephone}</li>
+	  <li>Email: ${data.email}</li>
+	  <li>Message: ${data.message}</li>
 	</ul>
 	
 	`
@@ -59,7 +67,7 @@ app.post('/contact',(req,res)=>{
     
     smtpTrans.sendMail(mailOpts,(error,response)=>{
         if(error){
-            return console.log(error);
+        console.log(error);
             
         }else{
          response.status(200).send("لقد تم إرسال الرسالة بنجاح.");

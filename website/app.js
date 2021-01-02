@@ -27,11 +27,12 @@ const sendingMail= (mail) =>{
         body:mail
     })
     .then((response)=>{
-        if(response.status === 200){
+        /*if(response.status === 200){
             alert("لقد تم إرسال الرسالة بنجاح!")
         } 
         else{
             alert("حدث خطأ, رجاء المحاولة مرة أخري")
-        }
+        }*/
+        return response.json()
     })
 }

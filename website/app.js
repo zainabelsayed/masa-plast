@@ -27,6 +27,7 @@ const sendingMail= (mail) =>{
         body:mail
     })
     .then((response)=>{
+        console.log(response.status)
         /*if(response.status === 200){
             alert("لقد تم إرسال الرسالة بنجاح!")
         } 

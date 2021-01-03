@@ -62,7 +62,7 @@ app.post('/contact',(req,response)=>{
             
         }else{
             console.log("Message sent: " + res.message);
-            response.status(200).send(`<script>alert("لقد تم إرسال الرسالة بنجاح.")</script>`)
+            response.status(200).json({status: 'OK', msg: 'Email sent'})
         }
         smtpTrans.close();
     })

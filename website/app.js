@@ -25,12 +25,12 @@ const sendingMail=async () =>{
     headers: {
         'Content-Type': 'application/json'
     },
-    body: JSON.stringify({
+    /*body: JSON.stringify({
         user: {
             name: "John",
             email: "john@example.com"
         }
-    })
+    })*/
 })
     .then((response)=>{
         console.log(response.status, response)

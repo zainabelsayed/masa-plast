@@ -62,7 +62,7 @@ app.post('/contact',(req,response)=>{
             
         }else{
             console.log("Message sent: " + res.message);
-            response.status(200).json({status: 'OK', msg: 'Email sent'})
+            response.status(200).send(200)
         }
         smtpTrans.close();
     })

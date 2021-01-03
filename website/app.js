@@ -14,24 +14,29 @@ function initMap(){
     })
 }
 
-/*const formEvent = form.addEventListener("submit",(event)=>{
+const formEvent = form.addEventListener("submit",(event)=>{
     event.preventDefault()
     sendingMail()
 })
 
-const sendingMail=async () =>{
-    await fetch("https://masa-plast-arabic.herokuapp.com/contact",{
+function sendingMail(name,telephone,email,message){
+    const options ={
         method: 'POST',
     headers: {
+        Accept:'application/json',
         'Content-Type': 'application/json'
     },
-    /*body: JSON.stringify({
+    body: JSON.stringify({
         user: {
-            name: "John",
-            email: "john@example.com"
+            name: name,
+            telephone:telephone,
+            email: email,
+            message:message
         }
     })
-})
+}
+    return fetch("https://masa-plast-arabic.herokuapp.com/contact",options)
+    .then(res=>res.json())
     .then((response)=>{
         console.log(response.status, response)
         if(response.status === 200){
@@ -41,5 +46,7 @@ const sendingMail=async () =>{
             alert("حدث خطأ, رجاء المحاولة مرة أخري")
         }
         //return response.json()
+    }).catch(err=>{
+        console.error(err)
     })
-}*/
+}

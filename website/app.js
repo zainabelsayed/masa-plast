@@ -27,12 +27,10 @@ function sendingMail(name,telephone,email,message){
         'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-        user: {
             name: name,
             telephone:telephone,
             email: email,
             message:message
-        }
     })
 }
     return fetch("https://masa-plast-arabic.herokuapp.com/contact",options)
@@ -47,6 +45,6 @@ function sendingMail(name,telephone,email,message){
         }
         //return response.json()
     }).catch(err=>{
-        console.error(err)
+        console.log(err)
     })
 }

@@ -13,8 +13,6 @@ oauth2Client.setCredentials({
 })
 const accessToken = oauth2Client.getAccessToken()
 const app = express()
-app.use(express.urlencoded());
-app.use(express.json());
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static('website'))
 app.get('/', function(req, res){

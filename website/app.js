@@ -20,7 +20,18 @@ const formEvent = form.addEventListener("submit",(event)=>{
 })
 
 const sendingMail=async () =>{
-    await fetch("https://masa-plast-arabic.herokuapp.com/contact")
+    await fetch("https://masa-plast-arabic.herokuapp.com/contact",{
+        method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        user: {
+            name: "John",
+            email: "john@example.com"
+        }
+    })
+})
     .then((response)=>{
         console.log(response.status, response)
         if(response.status === 200){

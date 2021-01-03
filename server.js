@@ -19,7 +19,7 @@ app.use(express.static('website'))
 app.get('/', function(req, res){
     res.send(fs.readFileSync('./website/index.html', 'utf8'));
 });
-app.post('/contact',(req,res)=>{
+app.post('/contact',(req,response)=>{
     console.log(req.body.name)
     const output=`
 	

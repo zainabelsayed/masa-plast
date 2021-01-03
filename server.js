@@ -57,14 +57,15 @@ app.post('/contact',(req,res)=>{
         }]
     }
     
-    smtpTrans.sendMail(mailOpts,(error,response)=>{
+    smtpTrans.sendMail(mailOpts,(error,res)=>{
         if(error){
             console.log(error);
             
         }else{
-            res.status(200).send("لقد تم إرسال الرسالة بنجاح.");
+            console.log("Message sent: " + res.message);
+            response.json(res.message);
         }
-
+        smtpTrans.close();
     })
     
 })

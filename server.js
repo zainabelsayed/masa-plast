@@ -13,7 +13,6 @@ oauth2Client.setCredentials({
 })
 const accessToken = oauth2Client.getAccessToken()
 const app = express()
-app.use(require('body-parser').json())
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static('website'))
 app.get('/', function(req, res){
@@ -63,7 +62,7 @@ app.post('/contact',(req,response)=>{
             
         }else{
             console.log("Message sent: " + res.message);
-            response.status(200).send(200)
+            response.status(200).send(`<script>alert("لقد تم إرسال الرسالة بنجاح.")</script>`)
         }
         smtpTrans.close();
     })

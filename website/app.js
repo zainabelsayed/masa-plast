@@ -14,7 +14,7 @@ function initMap(){
     })
 }
 
-const formEvent = form.addEventListener("submit",(event)=>{
+/*const formEvent = form.addEventListener("submit",(event)=>{
     event.preventDefault()
     sendingMail()
 })
@@ -31,4 +31,4 @@ const sendingMail=async () =>{
         }
         //return response.json()
     })
-}
+}*/

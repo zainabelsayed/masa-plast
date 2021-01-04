@@ -33,7 +33,7 @@ function sendEmail(name, email, message) {
       })
     };
   
-    return fetch("https://masa-plast-arabic.herokuapp.com/contact", options)
+    return fetch("/contact", options)
       .then(res => res.json())
       .then(res => {
         console.log("here is the response: ", res);

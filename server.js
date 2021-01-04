@@ -18,8 +18,8 @@ app.use(express.static('website'))
 app.get('/', function(req, res){
     res.send(fs.readFileSync('./website/index.html', 'utf8'));
 });
-app.post('/contact',(req,response)=>{
-    console.log(req.body.name)
+/*app.post('/contact',(req,response)=>{
+    
     const output=`
 	
     <p>You have a new contact request</p>
@@ -67,7 +67,36 @@ app.post('/contact',(req,response)=>{
         smtpTrans.close();
     })
     
-})
+})*/
+app.post("/contact", function(req, res, next) {
+    const transporter = nodemailer.createTransport({
+        service:"gmail",
+        auth:{
+            type:"OAuth2",
+            user:process.env.GMAIL_USER,
+            clientId:process.env.CLIENT_ID,
+            clientSecret:process.env.CLIENT_SECRET,
+            refreshToken:process.env.REFRESH_TOKEN,
+            accessToken:accessToken
+        }
+    });
+  
+    const mailOptions = {
+      from: `${req.body.email}`,
+      to: "test-email@gmail.com",
+      subject: `${req.body.name}`,
+      text: `${req.body.message}`,
+      replyTo: `${req.body.email}`
+    };
+  
+    transporter.sendMail(mailOptions, function(err, res) {
+      if (err) {
+        console.error("there was an error: ", err);
+      } else {
+        console.log("here is the res: ", res);
+      }
+    });
+  });
 
 
 // Setup Server

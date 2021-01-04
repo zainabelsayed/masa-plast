@@ -14,6 +14,7 @@ oauth2Client.setCredentials({
 const accessToken = oauth2Client.getAccessToken()
 const app = express()
 app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.json())
 app.use(express.static('website'))
 app.get('/', function(req, res){
     res.send(fs.readFileSync('./website/index.html', 'utf8'));

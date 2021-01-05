@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2'
 const mapDiv= document.querySelector('.mapDiv')
 const form = document.getElementById('contact-form')
 
@@ -43,10 +44,16 @@ function sendEmail(name, email,telephone, message) {
       .then(res =>{
         console.log(res, res.status)
          if(res.status === 200){
-          alert('لقد تم إرسال الرسالة بنجاح!')
+          Swal.fire({
+            icon: 'success',
+            title: 'لقد تم إرسال الرسالة بنجاح!',
+          })
           form.reset()
       }else{
-        alert('حدث خطأ, برجاء المحاولة مرة أخري.')
+        Swal.fire({
+          icon: 'error',
+          title: 'حدث خطأ, برجاء المحاولة مرة أخري.',
+        })
       }
     })
   }

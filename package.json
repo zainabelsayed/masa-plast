@@ -9,7 +9,8 @@
     "googleapis": "^66.0.0",
     "multiparty": "^4.2.2",
     "nodemailer": "^6.4.14",
-    "sweetalert": "^2.1.2"
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^10.13.0"
   },
   "devDependencies": {},
   "scripts": {

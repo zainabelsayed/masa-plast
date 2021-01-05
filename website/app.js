@@ -17,8 +17,8 @@ function initMap(){
 const formEvent = form.addEventListener("submit",(event)=>{
     event.preventDefault()
     const name = form.getElementsByTagName('input')[0].value
-    const email = form.getElementsByTagName('input')[1].value
-    const telephone = form.getElementsByTagName('input')[2].value
+    const email = form.getElementsByTagName('input')[2].value
+    const telephone = form.getElementsByTagName('input')[1].value
     const message = form.getElementsByTagName('textarea')[0].value
     console.log(name,email,telephone,message)
     sendEmail(name,email,telephone,message)

@@ -1,4 +1,4 @@
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert'
 const mapDiv= document.querySelector('.mapDiv')
 const form = document.getElementById('contact-form')
 

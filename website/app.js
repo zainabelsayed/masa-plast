@@ -1,4 +1,4 @@
-import Swal from 'sweetalert'
+const Swal = require('sweetalert2')
 const mapDiv= document.querySelector('.mapDiv')
 const form = document.getElementById('contact-form')
 

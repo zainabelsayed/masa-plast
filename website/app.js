@@ -20,7 +20,6 @@ const formEvent = form.addEventListener("submit",(event)=>{
     const email = form.getElementsByTagName('input')[2].value
     const telephone = form.getElementsByTagName('input')[1].value
     const message = form.getElementsByTagName('textarea')[0].value
-    console.log(name,email,telephone,message)
     sendEmail(name,email,telephone,message)
 })
 
@@ -41,7 +40,6 @@ function sendEmail(name, email,telephone, message) {
   
     return fetch("/contact", options)
       .then(res =>{
-        console.log(res, res.status)
          if(res.status === 200){
           Swal.fire({
             icon: 'success',

@@ -16,9 +16,7 @@ const app = express()
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 app.use(express.static('website'))
-/*app.get('/', function(req, res){
-    res.send(fs.readFileSync('./website/index.html', 'utf8'));
-});*/
+
 app.get('/', (req, res) => res.send('./website/index.html'))
 app.post('/contact',(req,response)=>{
     
@@ -70,36 +68,6 @@ app.post('/contact',(req,response)=>{
     })
     
 })
-/*app.post("/contact", function(req, res, next) {
-    const transporter = nodemailer.createTransport({
-        service:"gmail",
-        auth:{
-            type:"OAuth2",
-            user:process.env.GMAIL_USER,
-            clientId:process.env.CLIENT_ID,
-            clientSecret:process.env.CLIENT_SECRET,
-            refreshToken:process.env.REFRESH_TOKEN,
-            accessToken:accessToken
-        }
-    });
-  
-    const mailOptions = {
-      from: `${req.body.email}`,
-      to: process.env.RECIPIENT,
-      subject: `${req.body.name}`,
-      text: `${req.body.message}`,
-      replyTo: `${req.body.email}`
-    };
-  
-    transporter.sendMail(mailOptions, function(err, res) {
-      if (err) {
-        console.error("there was an error: ", err);
-      } else {
-        console.log("here is the res: ", res);
-      }
-    });
-  });*/
-
 
 // Setup Server
 const port = process.env.PORT || 3000

@@ -20,7 +20,7 @@ app.use(express.static('website'))
     res.send(fs.readFileSync('./website/index.html', 'utf8'));
 });*/
 app.get('/', (req, res) => res.send('./website/index.html'))
-/*app.post('/contact',(req,response)=>{
+app.post('/contact',(req,response)=>{
     
     const output=`
 	
@@ -69,8 +69,8 @@ app.get('/', (req, res) => res.send('./website/index.html'))
         smtpTrans.close();
     })
     
-})*/
-app.post("/contact", function(req, res, next) {
+})
+/*app.post("/contact", function(req, res, next) {
     const transporter = nodemailer.createTransport({
         service:"gmail",
         auth:{
@@ -98,7 +98,7 @@ app.post("/contact", function(req, res, next) {
         console.log("here is the res: ", res);
       }
     });
-  });
+  });*/
 
 
 // Setup Server

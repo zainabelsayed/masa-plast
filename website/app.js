@@ -18,12 +18,13 @@ const formEvent = form.addEventListener("submit",(event)=>{
     event.preventDefault()
     const name = form.getElementsByTagName('input')[0].value
     const email = form.getElementsByTagName('input')[1].value
+    const telephone = form.getElementsByTagName('input')[2].value
     const message = form.getElementsByTagName('textarea')[0].value
-    console.log(name,email,message)
-    sendEmail(name,email,message)
+    console.log(name,email,telephone,message)
+    sendEmail(name,email,telephone,message)
 })
 
-function sendEmail(name, email, message) {
+function sendEmail(name, email,telephone, message) {
     const options = {
       method: "POST",
       headers: {
@@ -33,6 +34,7 @@ function sendEmail(name, email, message) {
       body: JSON.stringify({
         name: name,
         email: email,
+        telephone:telephone,
         message: message
       })
     };

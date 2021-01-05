@@ -16,9 +16,10 @@ const app = express()
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
 app.use(express.static('website'))
-app.get('/', function(req, res){
+/*app.get('/', function(req, res){
     res.send(fs.readFileSync('./website/index.html', 'utf8'));
-});
+});*/
+app.get('/', (req, res) => res.send('./website/index.html'))
 /*app.post('/contact',(req,response)=>{
     
     const output=`

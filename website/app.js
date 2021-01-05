@@ -40,11 +40,12 @@ function sendEmail(name, email,telephone, message) {
     };
   
     return fetch("/contact", options)
-      .then(res => res.json())
-      .then(res => {
-        console.log("here is the response: ", res);
-      })
-      .catch(err => {
-        console.log("here is the error: ", err);
-      });
+      .then(res =>{
+        console.log(res, res.status)
+         if(res.status === 200){
+          alert('لقد تم إرسال الرسالة بنجاح!')
+      }else{
+        alert('حدث خطأ, برجاء المحاولة مرة أخري.')
+      }
+    })
   }

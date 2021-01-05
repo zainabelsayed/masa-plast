@@ -16,7 +16,11 @@ function initMap(){
 
 const formEvent = form.addEventListener("submit",(event)=>{
     event.preventDefault()
-    sendEmail()
+    const name = form.getElementById('name').value()
+    const email = form.getElementById('email').value()
+    const message = form.getElementById('message').value()
+    console.log(name,email,message)
+    sendEmail(name,email,message)
 })
 
 function sendEmail(name, email, message) {

@@ -7,4 +7,4 @@ it's a very responsive and well-designed website that represents your company in
 ### It has perfect and responsive views in laptop, mobile and tablet.
 | Mobile        | Ipad           | laptop  |
 | ------------- |:-------------:| -----:|
-|![](https://github.com/zainabelsayed/masa-plast/blob/main/Screenshot_8.png)|![](https://github.com/zainabelsayed/masa-plast/blob/main/Screenshot_10.png)|![](https://github.com/zainabelsayed/masa-plast/blob/main/Screenshot_5.png)
+|![](https://github.com/zainabelsayed/masa-plast/blob/main/Screenshot_8.png)|![](https://github.com/zainabelsayed/masa-plast/blob/main/Screenshot_1.png)|![](https://github.com/zainabelsayed/masa-plast/blob/main/Screenshot_5.png)
